@@ -1,0 +1,43 @@
+.form-control {
+  box-sizing: border-box;
+  position: relative;
+  padding: 1rem 0 0.25rem 0;
+  box-sizing: border-box;
+  clear: both;
+  font-size: 1rem;
+  text-align: inherit;
+}
+
+.form-control .label {
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding-bottom: 0.75rem;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.form-control input {
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.75rem;
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid #f0f0f0;
+}
+
+.form-control .form-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+  width: 100%;
+  line-height: 2.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.75rem;
+  background: transparent linear-gradient(270deg, #fba202 0%, #ff5800 100%) 0%
+    0% no-repeat padding-box;
+  color: #fff;
+}
