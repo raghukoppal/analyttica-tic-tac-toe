@@ -3,6 +3,7 @@ import { PlayBoard } from './index';
 import {
   resetPlaySquare,
   emptyPlaySquare,
+  updatePlayerWinCount,
 } from '../../services/players/actions';
 
 const mapStateToProps = (state) => ({
@@ -13,6 +14,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   resetPlaySquare: () => dispatch(resetPlaySquare()),
   emptyPlaySquare: () => dispatch(emptyPlaySquare()),
+  updatePlayerWinCount: (id) => dispatch(updatePlayerWinCount(id)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(PlayBoard);

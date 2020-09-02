@@ -7,6 +7,7 @@ import {
   UPDATE_PLAYED_SQUARE,
   RESET_SQUARES,
   EMPTY_SQUARES,
+  UPDATE_WIN_COUNT,
 } from './actionTypes';
 
 // action creators
@@ -47,4 +48,9 @@ export const resetPlaySquare = (idx, icon) => ({
 
 export const emptyPlaySquare = () => ({
   type: EMPTY_SQUARES,
+});
+
+export const updatePlayerWinCount = (id) => ({
+  type: UPDATE_WIN_COUNT,
+  payload: { id },
 });

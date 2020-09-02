@@ -6,6 +6,7 @@ import {
   UPDATE_PLAYED_SQUARE,
   RESET_SQUARES,
   EMPTY_SQUARES,
+  UPDATE_WIN_COUNT,
 } from './actionTypes';
 
 const initialPlayers = {
@@ -48,6 +49,15 @@ export const players = (state = initialPlayers, action = {}) => {
           ...player,
           playerIcon: index % 2 > 0 ? 'O' : 'X',
         })),
+      };
+    case UPDATE_WIN_COUNT:
+      return {
+        ...state,
+        players: state.players.map((player, index) =>
+          index === action.payload.id
+            ? { ...player, winCount: player.winCount + 1 }
+            : player
+        ),
       };
     default:
       return state;

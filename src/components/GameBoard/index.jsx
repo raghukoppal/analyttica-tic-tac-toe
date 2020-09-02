@@ -2,12 +2,16 @@ import React from 'react';
 import './style.css';
 import IconButton from '../IconButton/container';
 
-export const GameBoard = ({ playSquares }) => {
-  const renderSquare = (idx) => (
-    <div className='play-square' key={idx}>
-      <IconButton idx={idx} />
-    </div>
-  );
+export const GameBoard = ({ playSquares, winLine = [] }) => {
+  const renderSquare = (idx) => {
+    const winMatch = winLine && winLine.includes(idx);
+    return (
+      <div className={`play-square ${winMatch ? 'match' : ''}`} key={idx}>
+        <IconButton idx={idx} winLine={winLine} />
+      </div>
+    );
+  };
+  console.log('winLine', winLine);
   return (
     <div className='board-viewport'>
       <div className='board-content'>

@@ -16,6 +16,7 @@ export const calculateWinner = (squares) => {
       return {
         winIcon: squares[a],
         winLine: possibleLines[i],
+        status: true,
       };
     }
   }
