@@ -1,0 +1,32 @@
+.play-square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px dashed #999;
+  float: left;
+  font-size: 6rem;
+  font-weight: 600;
+  line-height: 50px;
+  margin-top: auto;
+  text-align: center;
+  height: 120px;
+  width: 120px;
+}
+
+.play-square.match {
+  color: #fb9e01;
+}
+
+.play-square.nt-brdr {
+  border-top: none;
+}
+
+.play-square.nb-brdr {
+  border-bottom: none;
+}
+.play-square.nr-brdr {
+  border-right: none;
+}
+.play-square.nl-br {
+  border-left: none;
+}

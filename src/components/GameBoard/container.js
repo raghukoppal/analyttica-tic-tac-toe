@@ -1,10 +1,11 @@
 import { connect } from 'react-redux';
-import { IconButton } from './index';
+import { GameBoard } from './index';
 import {
   resetPlayersIcon,
   addPlayersIcon,
   makeOpponentPlayerActive,
-  updatePlaySquare,
+  resetPlaySquare,
+  emptyPlaySquare,
 } from '../../services/players/actions';
 
 const mapStateToProps = (state, props) => ({
@@ -16,7 +17,8 @@ const mapDispatchToProps = (dispatch) => ({
   resetPlayersIcon: () => dispatch(resetPlayersIcon()),
   addPlayersIcon: () => dispatch(addPlayersIcon()),
   makeOpponentPlayerActive: (id) => dispatch(makeOpponentPlayerActive(id)),
-  updatePlaySquare: (idx, icon) => dispatch(updatePlaySquare(idx, icon)),
+  resetPlaySquare: () => dispatch(resetPlaySquare()),
+  emptyPlaySquare: () => dispatch(emptyPlaySquare()),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(IconButton);
+export default connect(mapStateToProps, mapDispatchToProps)(GameBoard);

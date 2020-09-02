@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './style.css';
 import { useHistory } from 'react-router-dom';
 
@@ -49,4 +50,8 @@ export const Welcome = ({ addPlayer }) => {
       </div>
     </div>
   );
+};
+
+Welcome.propTypes = {
+  addPlayer: PropTypes.func.isRequired,
 };
