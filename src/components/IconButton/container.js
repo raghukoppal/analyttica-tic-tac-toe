@@ -13,8 +13,6 @@ const mapStateToProps = (state, props) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  resetPlayersIcon: () => dispatch(resetPlayersIcon()),
-  addPlayersIcon: () => dispatch(addPlayersIcon()),
   makeOpponentPlayerActive: (id) => dispatch(makeOpponentPlayerActive(id)),
   updatePlaySquare: (idx, icon) => dispatch(updatePlaySquare(idx, icon)),
 });

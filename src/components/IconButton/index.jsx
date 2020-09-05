@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import './style.css';
 
 export const IconButton = ({
@@ -28,4 +29,11 @@ export const IconButton = ({
       {icon}
     </div>
   );
+};
+
+IconButton.propTypes = {
+  idx: PropTypes.number.isRequired,
+  players: PropTypes.array.isRequired,
+  makeOpponentPlayerActive: PropTypes.func.isRequired,
+  updatePlaySquare: PropTypes.func.isRequired,
 };

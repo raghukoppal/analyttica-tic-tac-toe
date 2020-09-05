@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './style.css';
 import IconButton from '../IconButton/container';
 
@@ -20,4 +21,9 @@ export const GameBoard = ({ playSquares, winLine = [] }) => {
       </div>
     </div>
   );
+};
+
+GameBoard.propTypes = {
+  playSquares: PropTypes.array.isRequired,
+  winLine: PropTypes.array.isRequired,
 };

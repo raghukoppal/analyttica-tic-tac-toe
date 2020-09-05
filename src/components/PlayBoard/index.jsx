@@ -12,9 +12,9 @@ export const PlayBoard = ({
   resetPlaySquare,
   updatePlayerWinCount,
 }) => {
-  const isMinTurn = playSquares.filter((item) => item != null).length > 4;
-  const winStatus = isMinTurn ? calculateWinner(playSquares) : null;
-  const drawStatus = isMinTurn ? isBoardFull(playSquares) : null;
+  const minimumTurns = playSquares.filter((item) => item != null).length > 4;
+  const winStatus = minimumTurns ? calculateWinner(playSquares) : null;
+  const drawStatus = minimumTurns ? isBoardFull(playSquares) : null;
 
   const history = useHistory();
   useEffect(() => {
