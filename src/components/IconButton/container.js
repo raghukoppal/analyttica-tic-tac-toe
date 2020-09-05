@@ -1,8 +1,6 @@
 import { connect } from 'react-redux';
 import { IconButton } from './index';
 import {
-  resetPlayersIcon,
-  addPlayersIcon,
   makeOpponentPlayerActive,
   updatePlaySquare,
 } from '../../services/players/actions';

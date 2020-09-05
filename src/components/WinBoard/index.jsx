@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './style.css';
 
 export const WinBoard = ({ players }) => {
@@ -19,4 +20,8 @@ export const WinBoard = ({ players }) => {
       </div>
     </div>
   ) : null;
+};
+
+WinBoard.propTypes = {
+  players: PropTypes.array.isRequired,
 };

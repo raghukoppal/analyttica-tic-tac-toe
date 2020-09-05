@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import './style.css';
 import { Player } from '../Player';
 import GameBoard from '../GameBoard/container';
@@ -28,10 +29,10 @@ export const PlayBoard = ({
     if (winStatus) {
       updatePlayerWinCount(winStatus.winIcon === 'X' ? 0 : 1);
       emptyPlaySquare();
-      setTimeout(() => resetPlaySquare(), 100);
+      setTimeout(() => resetPlaySquare(), 5);
     } else if (drawStatus) {
       emptyPlaySquare();
-      setTimeout(() => resetPlaySquare(), 100);
+      setTimeout(() => resetPlaySquare(), 5);
     }
   };
   return (
@@ -64,4 +65,12 @@ export const PlayBoard = ({
       />
     </div>
   );
+};
+
+PlayBoard.propTypes = {
+  players: PropTypes.array.isRequired,
+  playSquares: PropTypes.array.isRequired,
+  emptyPlaySquare: PropTypes.array.isRequired,
+  resetPlaySquare: PropTypes.func.isRequired,
+  updatePlayerWinCount: PropTypes.func.isRequired,
 };

@@ -1,6 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './style.css';
-import { calculateWinner } from '../../services/Api';
 
 export const Player = ({
   title,
@@ -32,4 +32,14 @@ export const Player = ({
       </div>
     </div>
   );
+};
+
+Player.propTypes = {
+  title: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  playerIcon: PropTypes.string.isRequired,
+  active: PropTypes.bool.isRequired,
+  winStatus: PropTypes.bool.isRequired,
+  drawStatus: PropTypes.bool.isRequired,
+  winCount: PropTypes.number.isRequired,
 };
