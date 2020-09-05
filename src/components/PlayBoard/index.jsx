@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 import './style.css';
 import { Player } from '../Player';
 import GameBoard from '../GameBoard/container';
@@ -14,6 +15,14 @@ export const PlayBoard = ({
   const isMinTurn = playSquares.filter((item) => item != null).length > 4;
   const winStatus = isMinTurn ? calculateWinner(playSquares) : null;
   const drawStatus = isMinTurn ? isBoardFull(playSquares) : null;
+
+  const history = useHistory();
+  useEffect(() => {
+    const winner = players.find((player) => player.winCount === 6);
+    if (winner) {
+      history.push('/winboard');
+    }
+  });
 
   const resetPlay = () => {
     if (winStatus) {

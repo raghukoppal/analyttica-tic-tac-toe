@@ -9,6 +9,7 @@ import logo from './logo.svg';
 import './App.css';
 import Welcome from './components/Welcome/container';
 import PlayBoard from './components/PlayBoard/container';
+import WinBoard from './components/WinBoard/container';
 
 const App = () => (
   <>
@@ -23,6 +24,9 @@ const App = () => (
           </Route>
           <Route path='/playboard'>
             <PlayBoard />
+          </Route>
+          <Route path='/winboard'>
+            <WinBoard />
           </Route>
         </Switch>
       </Router>

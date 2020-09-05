@@ -1,0 +1,26 @@
+.winner-block {
+  text-align: center;
+}
+
+.winner-block .status {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.winner-block .player {
+  border: 3px solid #fb9e01;
+  width: 160px;
+  margin: 1rem auto;
+  height: 150px;
+}
+.winner-block .title {
+  font-size: 1rem;
+}
+
+.winner-block .name {
+  font-size: 1.2rem;
+}
+
+.winner-block .player-icon {
+  font-size: 5rem;
+}

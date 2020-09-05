@@ -11,7 +11,6 @@ export const GameBoard = ({ playSquares, winLine = [] }) => {
       </div>
     );
   };
-  console.log('winLine', winLine);
   return (
     <div className='board-viewport'>
       <div className='board-content'>
